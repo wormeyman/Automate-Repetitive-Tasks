@@ -1,6 +1,14 @@
 #SingleInstance Force
 #NoEnv
 
+F7::
+  Send, ^c ; copy text
+  Sleep 100 ; wait a bit
+    Clipboard := StrReplace(Clipboard, "-") ; Remove all -'s from the clipboard contents
+  Sleep 100 ; wait a bit
+  Send ^v ; paste text
+Return
+
 F8::
     TrayTip, Replace UPC Dashes, Replacing UPC Dashes, 1, 17
   Send {F5} ; refresh page to reset tab state
@@ -23,4 +31,5 @@ F8::
   Sleep 200 ; wait a bit
   Send, {Enter} ; enter on Next arrow
 Return
+
 F9::ExitApp
