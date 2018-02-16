@@ -1,3 +1,6 @@
+#SingleInstance Force
+#NoEnv
+
 F8::
     TrayTip, Replace UPC Dashes, Replacing UPC Dashes, 1, 17
   Send {F5} ; refresh page to reset tab state
